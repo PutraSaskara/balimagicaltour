@@ -1,26 +1,37 @@
+/* Gunakan @tailwind, ini praktik terbaik */
 @import "tailwindcss";
 
+/* Langkah 1: Definisikan SEMUA warna Anda sebagai CSS variable.
+  Ini adalah "sumber kebenaran" untuk style Anda.
+*/
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #FFFBF5; /* Warna beige dari tema Anda */
+  --foreground: #0F172A; /* Warna teks gelap dari tema Anda */
+  
+  /* Warna kustom Anda */
+  --primary: #F97316;
+  --secondary: #1F4B3F;
+  --accent: #D1FAE5;
 }
 
+/* Langkah 2: Beri tahu Tailwind untuk membuat class utility
+  berdasarkan CSS variable di atas menggunakan @theme inline.
+*/
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: 'Poppins', 'sans-serif';
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
+/* Langkah 3: Terapkan style dasar ke body.
+*/
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
+
