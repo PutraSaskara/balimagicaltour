@@ -44,7 +44,7 @@ export default function TourDetailPage({ params }) {
           <div className="lg:col-span-1">
             <div className="bg-background p-8 rounded-xl shadow-lg sticky top-28">
               <p className="text-lg">Starting from</p>
-              <p className="text-4xl font-bold text-secondary my-2">Rp {tour.price}</p>
+              <p className="text-4xl font-bold text-secondary my-2">USD {tour.price}</p>
               <p className="text-gray-600 mb-6">per person</p>
                <a 
                 href={whatsappLink}

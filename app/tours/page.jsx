@@ -13,7 +13,7 @@ const TourCard = ({ tour }) => (
           <h3 className="text-xl font-bold mt-2 mb-2">{tour.title}</h3>
           <p className="text-gray-500 text-sm mb-4">{tour.duration}</p>
           <div className="flex justify-between items-center">
-            <p className="text-lg font-bold text-secondary">Rp {tour.price}</p>
+            <p className="text-lg font-bold text-secondary">USD {tour.price}</p>
             <span className="text-primary font-semibold">View Details &rarr;</span>
           </div>
         </div>
